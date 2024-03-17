@@ -1,3 +1,6 @@
+from art import logo
+import os
+print(logo)
 print("Welcome to Auction Program")
 bidders = {}
 anyotherbidder = "yes"
@@ -6,6 +9,8 @@ while anyotherbidder=="yes":
     bid = int(input("What's your bid?: $"))
     bidders.update({bid:name})
     anyotherbidder = input("Are there any other bidders? Type 'yes' or 'no'.")
+    if anyotherbidder=="yes":
+        os.system('clear')
 
 
 allthevalues = bidders.keys()
